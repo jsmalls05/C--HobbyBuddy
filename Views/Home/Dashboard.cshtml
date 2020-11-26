@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    body{
+  margin: auto;
+  width: 60%;
+  border: 3px solid;
+  padding: 10px;
+}
+</style>
+
+<div class="text-center">
+    <body>
+    <h1 class="display-4">Hobbies</h1>
+    
+<table class="table table border">
+    <tr>
+        <th>Name</th>
+        <th>Enthousiasts</th>
+    </tr>
+    @{
+        foreach(TheFun a in @ViewBag.AllFun)
+        {
+            <tr>
+                <td><a href="/hobby/@a.FunId">@a.Name</a></td>
+                <td>@a.UserId</td>
+            </tr>
+        }
+    }
+</table>
+    </body>
+</div>
+
+
+
+<a href="/New"><button class="btn btn-primary">Create a Hobby</button></a>
+

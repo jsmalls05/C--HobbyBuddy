@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>@ViewBag.FunTime.Name</h1>
+<br>
+<br>
+<h5>Description:</h5>
+<p>@ViewBag.FunTime.Description</p>
+<br>
+<br>
+<h5>@ViewBag.FunTime.Name Enthusiasts:</h5>
+@foreach (var item in ViewBag.Hobbies)
+{
+    <p>@item.User.UserName</p>
+}
+<br>
+<br>
+<h5>Become an Enthusiasts!</h5>
+    <form asp-action="AddHobby" asp-controller="Home" method="post">
+        <input type="hidden" value="@ViewBag.FunTime.FunId" name="FunId">
+        <input type="hidden" value="@ViewBag.OneUser.UserId" name="UserId">
+        <input type="submit" value="Add to Hobbies">
+    </form>
+
+@{
+    foreach(var x in @ViewBag.FunTime.HobbyBy)
+    {
+        <a href="/">@x.User.UserName</a>
+    }
+}
+
+
+
+
