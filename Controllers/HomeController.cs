@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
-namespace Exam.Controllers
+namespace Exam.Controllers 
 {
     public class HomeController : Controller
     {
