@@ -12,6 +12,6 @@ namespace Exam.Models
         public User User {get; set;}
 
         public int FunId {get; set;}
-        public TheFun FunHobby {get; set;}
+        public TheFun FunHobby {get; set;} 
     }
 }
