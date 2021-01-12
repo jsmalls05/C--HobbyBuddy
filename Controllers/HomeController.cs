@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Exam.Controllers 
 {
-    public class HomeController : Controller
+    public class HomeController : Controller 
     {
         private MyContext _context;
 
