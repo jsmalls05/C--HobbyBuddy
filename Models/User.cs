@@ -12,7 +12,7 @@ namespace Exam.Models
 
         [Required]
         [MinLength(3)]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage="Your First name must only contain letters")]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage="Your First name must only contain letters")] 
         public string FirstName {get; set;}
 
         [Required]
